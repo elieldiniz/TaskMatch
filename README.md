@@ -1,47 +1,77 @@
-Entendi! Vou atualizar o README para refletir suas imagens específicas na pasta /public/screenshots/, incluindo os mockups de celular para dashboard e tarefas, e os mockups de notebook para as outras telas. Aqui está o README atualizado:
+Perfeito! Vou criar um README.md completo, profissional, com estrutura clara, nomes de seções em português formal e títulos mais elegantes.
+A seção de screenshots será chamada de Demonstração Visual.
+O banner será destacado, as imagens ficarão centralizadas e com legendas, e todos os detalhes do projeto estarão organizados.
 
 # TaskMatch
 
 <div align="center">
-  <img src="https://placehold.co/1200x300?text=TaskMatch+%7C+Organize+Tarefas+em+Dupla" alt="TaskMatch Banner" width="100%">
-
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-  [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/seu-usuario/taskmatch)
-  [![Status: Active](https://img.shields.io/badge/Status-Active-green.svg)](https://github.com/seu-usuario/taskmatch)
-  [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/seu-usuario/taskmatch/pulls)
-  [![Made with React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)](https://reactjs.org/)
-  [![Next.js](https://img.shields.io/badge/Next.js-14.x-black?logo=next.js&logoColor=white)](https://nextjs.org/)
-  [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-  [![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.x-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
+  <img src="/public/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
 </div>
 
-## ✨ Visão Geral
+<div align="center">
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Licença MIT" />
+  </a>
+  <img src="https://img.shields.io/badge/versão-1.0.0-blue.svg" alt="Versão" />
+  <img src="https://img.shields.io/badge/Status-Ativo-green.svg" alt="Status" />
+  <a href="https://github.com/elieldimz/taskmatch/pulls">
+    <img src="https://img.shields.io/badge/PRs-bem--vindos-brightgreen.svg" alt="PRs Welcome" />
+  </a>
+  <img src="https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-14.x-black?logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-10.x-0055FF?logo=framer&logoColor=white" alt="Framer Motion" />
+</div>
+
+---
+
+## ✨ Sobre o Projeto
 
 O **TaskMatch** é uma plataforma web inovadora para organização, gamificação e colaboração em tarefas em dupla.  
 Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompensas e design responsivo, o TaskMatch oferece uma experiência divertida, produtiva e segura para quem deseja evoluir junto.
 
 ---
 
-## 📸 Screenshots
+## 🎨 Demonstração Visual
 
 <div align="center">
-  <h3>Versão Desktop</h3>
-  <p>
-    <img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" />
-    <img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" />
-  </p>
-  
-  <h3>Versão Mobile</h3>
-  <p>
-    <img src="/public/screenshots/dashboard.png" alt="Dashboard Mobile" width="200" />
-    <img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="200" />
-  </p>
+
+### Versão Desktop
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
+      <sub><b>Tela Inicial</b></sub>
+    </td>
+    <td align="center">
+      <img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
+      <sub><b>Painel Principal</b></sub>
+    </td>
+  </tr>
+</table>
+
+### Versão Mobile
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="/public/screenshots/dashboard.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
+      <sub><b>Dashboard (Mobile)</b></sub>
+    </td>
+    <td align="center">
+      <img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
+      <sub><b>Tarefas (Mobile)</b></sub>
+    </td>
+  </tr>
+</table>
+
 </div>
 
 ---
 
-## 🧩 Funcionalidades Principais
+## 🚀 Funcionalidades
 
 - **Onboarding Gamificado:** Criação de perfil em múltiplos passos, com animações, personalização e pareamento via código.
 - **Painel do Usuário:** Visualização de conquistas, tarefas, recompensas e progresso em tempo real.
@@ -53,7 +83,7 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 
 ---
 
-## 🏗️ Arquitetura e Estrutura
+## 🏗️ Estrutura do Projeto
 
 
 
@@ -65,11 +95,6 @@ contexts/ PerfilContext.tsx # Estado global do perfil
 
 hooks/ useCadastroPerfil.ts # Hook customizado para fluxo de cadastro
 
-
-- **Gerenciamento de Estado:** Context API + hooks customizados
-- **Persistência Temporária:** localStorage durante o onboarding
-- **Estilização:** Tailwind CSS + Framer Motion para animações
-- **Componentização:** Separação clara de responsabilidades
 
 ---
 
@@ -84,8 +109,6 @@ flowchart TD
     D --> E[Painel]
     F --> E
 
-Onboarding: StepEscolhaInicial → GeneroStep → PerfilStep → ConviteStep → CodigoStep → ApelidosStep → ConfirmarStep → LoginStep
-Painel: Após login, acesso a conquistas, tarefas, recompensas e progresso
 🛡️ Segurança e Privacidade
 Termos de Uso: Página dedicada, detalhada e atualizada (/termos)
 Consentimento Explícito: Antes do cadastro
@@ -94,15 +117,19 @@ Proteção de Rotas: (em breve) Painel acessível apenas para usuários autentic
 Política de Privacidade: (em breve) Página dedicada e linkada no login/onboarding
 Tratamento de Dados Sensíveis: Criptografia, controle de acesso e transparência
 🖥️ Tecnologias Utilizadas
-
+React 18.x
+Next.js 14.x
+TypeScript 5.x
+Tailwind CSS 3.x
+Framer Motion 10.x
 Context API (estado global)
-(Futuro) NextAuth/Firebase Auth (autenticação real)
-(Futuro) Notificações Push, Login Social, API pública
-📲 Como Rodar Localmente
+ESLint e Prettier (padronização de código)
+(Futuro) NextAuth/Firebase Auth, Notificações Push, Login Social, API pública
+⚙️ Como Executar Localmente
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/taskmatch.git
+git clone https://github.com/elieldimz/taskmatch.git
 cd taskmatch
 
 
@@ -140,7 +167,6 @@ http://localhost:3000
 🤝 Como Contribuir
 
 Contribuições são muito bem-vindas!
-Veja como participar:
 
 Faça um fork do projeto
 Crie uma branch (git checkout -b feature/sua-feature)
@@ -153,7 +179,7 @@ Padrões de código:
 Use TypeScript e siga a arquitetura de componentes
 Escreva commits claros e descritivos
 Sempre documente novas funcionalidades
-❓ FAQ
+❓ Perguntas Frequentes
 
 1. O TaskMatch é gratuito?
 Sim, o uso é gratuito. Futuras funcionalidades premium podem ser adicionadas.
@@ -168,10 +194,9 @@ Atualmente, o foco é em duplas. Futuras versões podem expandir para grupos.
 Abra uma issue ou envie um e-mail para suporte@taskmatch.com.
 
 🔗 Links Úteis
-Documentação dos Componentes
-Diagramas Visuais
 Termos de Uso
 Política de Privacidade
+Diagramas Visuais
 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
@@ -184,18 +209,3 @@ LinkedIn do autor
 TaskMatch — Organize, conquiste e evolua em dupla!
 
 
----
-
-Atualizei o README para incluir suas imagens específicas:
-
-1. **Versão Desktop:**
-   - `/public/screenshots/telainicio.png` - Tela inicial do aplicativo
-   - `/public/screenshots/painel.png` - Painel principal do aplicativo
-
-2. **Versão Mobile:**
-   - `/public/screenshots/dashboard.png` - Dashboard em versão mobile
-   - `/public/screenshots/tarefas.png` - Tela de tarefas em versão mobile
-
-Organizei as imagens em duas seções distintas (Desktop e Mobile) para destacar a responsividade do seu aplicativo. As imagens de desktop estão configuradas para exibição mais larga (400px) enquanto as de celular estão em formato mais estreito (200px) para representar melhor as proporções reais dos dispositivos.
-
-Certifique-se de que as imagens estejam realmente na pasta `/public/screenshots/` com os nomes exatos mencionados para que os links funcionem corretamente no GitHub.undefined
