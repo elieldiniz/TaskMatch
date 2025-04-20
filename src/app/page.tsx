@@ -1,136 +1,191 @@
-import { useState } from "react";
+'use client'
+import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { Heart, CheckCircle2, Users, Star } from 'lucide-react'
 
 export default function Home() {
-  const [step, setStep] = useState(0);
+  const router = useRouter()
+  const [hearts, setHearts] = useState<any[]>([])
+  const [explosions, setExplosions] = useState<any[]>([])
+  const [particles, setParticles] = useState<any[]>([])
 
-  if (step === 0) {
-    return (
-      <main className="min-h-screen bg-gradient-to-br from-pink-100 to-purple-200 flex items-center justify-center">
-        <div className="text-center p-8 bg-white rounded-2xl shadow-2xl max-w-md w-full animate-fade-in">
-          <h1 className="text-4xl font-bold mb-4 text-pink-600">🎉 Bem-vindos ao TaskMatch!</h1>
-          <p className="text-gray-600 mb-6 text-lg">
-            O jeito divertido de casais organizarem as tarefas do dia a dia 💖
-          </p>
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png"
-            alt="Casal"
-            className="w-40 mx-auto mb-6"
-          />
-          <button
-            onClick={() => setStep(1)}
-            className="bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-6 rounded-xl transition-all duration-300 shadow-lg"
-          >
-            Começar agora 🚀
-          </button>
-        </div>
-      </main>
-    );
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const heights = ['-20vh', '-40vh', '-60vh', '-80vh', '-100vh']
+      const id = Date.now()
+      const top = heights[Math.floor(Math.random() * heights.length)]
+      const newHeart = {
+        id,
+        left: Math.random() * 100,
+        size: 12 + Math.random() * 16,
+        duration: 4 + Math.random() * 4,
+        delay: Math.random() * 2,
+        targetY: top,
+      }
+
+      setHearts((prev) => [...prev.slice(-30), newHeart])
+
+      setTimeout(() => {
+        setExplosions((prev) => [
+          ...prev,
+          {
+            id,
+            left: newHeart.left,
+            top: newHeart.targetY,
+          },
+        ])
+        setTimeout(() => {
+          setExplosions((prev) => prev.filter((e) => e.id !== id))
+        }, 1000)
+      }, (newHeart.delay + newHeart.duration) * 1000)
+    }, 400)
+
+    return () => clearInterval(interval)
+  }, [])
+
+  const playSound = () => {
+    const audio = new Audio(
+      'https://cdn.pixabay.com/download/audio/2022/03/15/audio_9c3b99cb6b.mp3?filename=click-124467.mp3'
+    )
+    audio.play()
+    triggerParticles()
   }
 
-  if (step === 1) {
-    return (
-      <main className="min-h-screen bg-gradient-to-br from-yellow-100 to-orange-200 flex items-center justify-center">
-        <div className="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-md animate-fade-in">
-          <h2 className="text-2xl font-bold text-center mb-4 text-orange-600">👤 Crie seu perfil</h2>
-          <div className="space-y-4">
-            <input
-              type="text"
-              placeholder="Seu nome"
-              className="w-full px-4 py-2 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-400"
-            />
-            <select className="w-full px-4 py-2 rounded-xl border border-gray-300">
-              <option>Escolha um avatar</option>
-              <option>🐱 Gato Fofo</option>
-              <option>🐶 Cachorro Alegre</option>
-              <option>🐰 Coelho Doce</option>
-              <option>🦊 Raposa Charmosa</option>
-            </select>
-            <label className="block text-sm text-gray-600">Cor do perfil:</label>
-            <input
-              type="color"
-              className="w-full h-12 rounded-xl"
-              defaultValue="#f472b6"
-            />
-            <button
-              onClick={() => setStep(2)}
-              className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 rounded-xl mt-4"
-            >
-              Continuar 💫
-            </button>
-          </div>
-        </div>
-      </main>
-    );
+  const triggerParticles = () => {
+    const newParticles = Array.from({ length: 12 }).map((_, i) => ({
+      id: Date.now() + i,
+      x: Math.random() * 100 - 50,
+      y: Math.random() * -100 - 50,
+      size: Math.random() * 8 + 4,
+    }))
+    setParticles(newParticles)
+    setTimeout(() => setParticles([]), 800)
   }
 
-  if (step === 2) {
-    return (
-      <main className="min-h-screen bg-gradient-to-br from-purple-100 to-indigo-200 flex items-center justify-center">
-        <div className="bg-white p-6 rounded-2xl shadow-2xl w-full max-w-md animate-fade-in">
-          <h2 className="text-2xl font-bold text-center mb-4 text-indigo-600">💑 Conecte seu par</h2>
-          <p className="text-center text-sm text-gray-500 mb-4">
-            Compartilhe este código com seu parceiro(a) para formar o casal no app:
-          </p>
-          <div className="text-center text-2xl font-mono bg-indigo-100 text-indigo-700 rounded-xl py-3 mb-4">
-            #C3UPLA
-          </div>
-          <p className="text-center text-sm text-gray-500 mb-2">ou insira um código recebido:</p>
-          <input
-            type="text"
-            placeholder="#CÓDIGO"
-            className="w-full px-4 py-2 rounded-xl border border-gray-300 text-center"
-          />
-          <button
-            onClick={() => setStep(3)}
-            className="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 rounded-xl mt-4"
-          >
-            Entrar no casal 💕
-          </button>
-        </div>
-      </main>
-    );
+  const handleComecar = () => {
+    playSound()
+    setTimeout(() => {
+      router.push('/CadastroPerfil')
+    }, 500)
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-pink-100 to-purple-200 p-6 flex flex-col items-center">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl p-6">
-        <h1 className="text-3xl font-bold text-center mb-4">TaskMatch 💖</h1>
-        <p className="text-center text-gray-600 mb-6">Organize suas tarefas em casal de forma divertida!</p>
-
-        <section className="space-y-4">
-          <div className="bg-purple-100 p-4 rounded-xl">
-            <h2 className="font-semibold">👥 Casal</h2>
-            <p className="text-sm text-gray-600">João 💙 & Maria 💖</p>
-          </div>
-
-          <div className="bg-pink-100 p-4 rounded-xl">
-            <h2 className="font-semibold">📅 Tarefas de Hoje</h2>
-            <ul className="list-disc ml-5 text-sm text-gray-700">
-              <li>Lavar a louça - João (25 pts)</li>
-              <li>Arrumar a cama - Maria (10 pts)</li>
-              <li>Alimentar o pet - Livre (10 pts)</li>
-            </ul>
-          </div>
-
-          <div className="bg-yellow-100 p-4 rounded-xl">
-            <h2 className="font-semibold">🎮 Pontuação</h2>
-            <p className="text-sm">João: 85 pts | Maria: 100 pts</p>
-          </div>
-
-          <div className="bg-green-100 p-4 rounded-xl">
-            <h2 className="font-semibold">🎁 Recompensas</h2>
-            <ul className="list-disc ml-5 text-sm text-gray-700">
-              <li>Café na cama (300 pts)</li>
-              <li>Filme escolhido (200 pts)</li>
-              <li>Dia de folga (800 pts)</li>
-            </ul>
-          </div>
-        </section>
-
-        <button className="mt-6 w-full bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-xl">
-          + Nova Tarefa
-        </button>
+    <main className="relative overflow-hidden min-h-screen bg-gradient-to-br from-[#1a1c2c] via-[#2e2f3e] to-[#3e4050] flex items-center justify-center text-white px-4">
+      {/* Corações flutuantes */}
+      <div className="absolute inset-0 z-0">
+        {hearts.map((heart) => (
+          <motion.div
+            key={heart.id}
+            initial={{ opacity: 0, y: 0 }}
+            animate={{ opacity: 1, y: heart.targetY }}
+            transition={{ duration: heart.duration, delay: heart.delay }}
+            className="absolute text-pink-400 select-none"
+            style={{ left: `${heart.left}%`, fontSize: `${heart.size}px`, top: '100%' }}
+          >
+            💖
+          </motion.div>
+        ))}
+        {explosions.map((e) => (
+          <motion.div
+            key={e.id}
+            initial={{ opacity: 1, scale: 0.5, rotate: 0 }}
+            animate={{ opacity: 0, scale: 2.5, rotate: 1080 }}
+            transition={{ duration: 1 }}
+            className="absolute text-yellow-300 text-2xl pointer-events-none animate-ping"
+            style={{ left: `${e.left}%`, top: `calc(100% + ${e.top})` }}
+          >
+            🎇
+          </motion.div>
+        ))}
       </div>
+
+      {/* Partículas do clique */}
+      <div className="absolute z-20 pointer-events-none">
+        {particles.map((p) => (
+          <motion.div
+            key={p.id}
+            initial={{ opacity: 1, x: 0, y: 0 }}
+            animate={{ opacity: 0, x: p.x, y: p.y }}
+            transition={{ duration: 0.8 }}
+            className="absolute bg-pink-400 rounded-full"
+            style={{
+              top: '50%',
+              left: '50%',
+              width: p.size,
+              height: p.size,
+            }}
+          />
+        ))}
+      </div>
+
+      {/* Conteúdo principal */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8 }}
+        className="z-10 text-center px-8 py-12 bg-gradient-to-br from-[#2e2f4f]/70 to-[#1a1c2c]/70 backdrop-blur-2xl rounded-3xl shadow-[0_0_50px_#f472b6] w-full max-w-3xl border border-white/30 hover:shadow-[0_0_60px_#f472b6aa] transition-shadow duration-500"
+      >
+        {/* "Logo" minimalista com animação */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7, rotate: -10 }}
+          animate={{ opacity: 1, scale: 1, rotate: 0 }}
+          transition={{ duration: 0.8, type: "spring" }}
+          className="flex justify-center mb-6"
+        >
+          <div className="w-24 h-24 rounded-full bg-white/10 border-4 border-pink-400 shadow-lg flex items-center justify-center relative">
+            {/* Ícones sobrepostos e animados */}
+            <motion.div
+              initial={{ scale: 0, y: 10 }}
+              animate={{ scale: 1, y: 0 }}
+              transition={{ delay: 0.2, type: "spring" }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <Heart size={44} className="text-pink-400 drop-shadow-lg" />
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0, x: -10, y: -10 }}
+              animate={{ scale: 1, x: 0, y: 0 }}
+              transition={{ delay: 0.35, type: "spring" }}
+              className="absolute left-8 top-6 bg-[#1a1c2c] rounded-full p-1"
+            >
+              <CheckCircle2 size={28} className="text-emerald-400" />
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0, x: 10, y: -10 }}
+              animate={{ scale: 1, x: 0, y: 0 }}
+              transition={{ delay: 0.5, type: "spring" }}
+              className="absolute right-8 top-6 bg-[#1a1c2c] rounded-full p-1"
+            >
+              <Users size={28} className="text-blue-400" />
+            </motion.div>
+            <motion.div
+              initial={{ scale: 0, y: 10 }}
+              animate={{ scale: 1, y: 0 }}
+              transition={{ delay: 0.65, type: "spring" }}
+              className="absolute left-1/2 bottom-5 -translate-x-1/2 bg-[#1a1c2c] rounded-full p-0.5"
+            >
+              <Star size={24} className="text-yellow-300" />
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <h1 className="text-5xl sm:text-6xl font-extrabold mb-6 text-[#f472b6] drop-shadow-2xl tracking-tight">
+          💖 TaskMatch
+        </h1>
+        <p className="text-gray-200 mb-8 text-lg sm:text-xl font-medium max-w-xl mx-auto">
+          Transforme as tarefas do dia a dia em uma jornada divertida com quem você ama — sem brigas, só amor! 💕
+        </p>
+
+        <motion.button
+          onClick={handleComecar}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className="mt-4 px-8 py-4 bg-pink-500 hover:bg-pink-600 text-white text-lg font-bold rounded-full shadow-lg transition-all"
+        >
+          Começar agora 💑
+        </motion.button>
+      </motion.div>
     </main>
-  );
+  )
 }
