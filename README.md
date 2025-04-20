@@ -1,6 +1,6 @@
-Perfeito! Vou criar um README.md completo, profissional, com estrutura clara, nomes de seções em português formal e títulos mais elegantes.
-A seção de screenshots será chamada de Demonstração Visual.
-O banner será destacado, as imagens ficarão centralizadas e com legendas, e todos os detalhes do projeto estarão organizados.
+Com certeza!
+Aqui está um README.md completo, robusto, com estrutura profissional, títulos claros, seções bem organizadas, linguagem formal e todos os detalhes para impressionar qualquer visitante do seu repositório.
+A marcação está 100% em Markdown puro, compatível com o GitHub.
 
 # TaskMatch
 
@@ -9,19 +9,17 @@ O banner será destacado, as imagens ficarão centralizadas e com legendas, e to
 </div>
 
 <div align="center">
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="Licença MIT" />
-  </a>
-  <img src="https://img.shields.io/badge/versão-1.0.0-blue.svg" alt="Versão" />
-  <img src="https://img.shields.io/badge/Status-Ativo-green.svg" alt="Status" />
-  <a href="https://github.com/elieldimz/taskmatch/pulls">
-    <img src="https://img.shields.io/badge/PRs-bem--vindos-brightgreen.svg" alt="PRs Welcome" />
-  </a>
-  <img src="https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-14.x-black?logo=next.js&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Framer_Motion-10.x-0055FF?logo=framer&logoColor=white" alt="Framer Motion" />
+
+[![Licença MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0-blue.svg)
+![Status](https://img.shields.io/badge/Status-Ativo-green.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-bem--vindos-brightgreen.svg)](https://github.com/elieldimz/taskmatch/pulls)
+![React](https://img.shields.io/badge/React-18.x-61DAFB?logo=react&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-14.x-black?logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue?logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?logo=tailwind-css&logoColor=white)
+![Framer Motion](https://img.shields.io/badge/Framer_Motion-10.x-0055FF?logo=framer&logoColor=white)
+
 </div>
 
 ---
@@ -37,7 +35,7 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 
 <div align="center">
 
-### Versão Desktop
+### 💻 Versão Desktop
 
 <table>
   <tr>
@@ -52,12 +50,12 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
   </tr>
 </table>
 
-### Versão Mobile
+### 📱 Versão Mobile
 
 <table>
   <tr>
     <td align="center">
-      <img src="/public/screenshots/dashboard.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
+      <img src="/public/screenshots/dashabord.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
       <sub><b>Dashboard (Mobile)</b></sub>
     </td>
     <td align="center">
@@ -85,22 +83,31 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 
 ## 🏗️ Estrutura do Projeto
 
+```text
+/app
+  CadastroPerfil.tsx         # Fluxo principal de cadastro/onboarding
+  painel.tsx                 # Painel do usuário autenticado
+  page.tsx                   # Página inicial
+  /termos
+    page.tsx                 # Termos de Uso
+  /privacidade
+    page.tsx                 # Política de Privacidade (em breve)
 
+components/
+  steps/                     # Steps do onboarding
+  painel-components/         # Componentes do painel
+  tarefa/                    # Tarefas e modais
+  recompensa/                # Recompensas e modais
+  comuns/                    # Toasts, toolkits, etc.
+  ui/                        # Botões, barras, UI genérica
 
-/app CadastroPerfil.tsx # Fluxo principal de cadastro/onboarding painel.tsx # Painel do usuário autenticado page.tsx # Página inicial /termos page.tsx # Termos de Uso /privacidade page.tsx # Política de Privacidade (em breve)
+contexts/
+  PerfilContext.tsx          # Estado global do perfil
 
-components/ steps/ # Steps do onboarding painel-components/ # Componentes do painel tarefa/ # Tarefas e modais recompensa/ # Recompensas e modais comuns/ # Toasts, toolkits, etc. ui/ # Botões, barras, UI genérica
+hooks/
+  useCadastroPerfil.ts       # Hook customizado para fluxo de cadastro
 
-contexts/ PerfilContext.tsx # Estado global do perfil
-
-hooks/ useCadastroPerfil.ts # Hook customizado para fluxo de cadastro
-
-
----
-
-## 🔄 Fluxo do Usuário
-
-```mermaid
+🔄 Fluxo do Usuário
 flowchart TD
     A[Escolha Inicial] -->|Criar perfil| B[Onboarding Steps]
     A -->|Já tenho perfil| F[LoginStep]
