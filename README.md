@@ -1,11 +1,12 @@
-Com certeza!
-Aqui está um README.md completo, robusto, com estrutura profissional, títulos claros, seções bem organizadas, linguagem formal e todos os detalhes para impressionar qualquer visitante do seu repositório.
-A marcação está 100% em Markdown puro, compatível com o GitHub.
+Claro! Aqui está o conteúdo **pronto para colar diretamente no seu repositório GitHub** como `README.md`. Basta copiar e colar:
 
-# TaskMatch
+---
+
+```md
+# 🎯 TaskMatch
 
 <div align="center">
-  <img src="/public/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
+  <img src="/public/screenshot/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
 </div>
 
 <div align="center">
@@ -26,12 +27,14 @@ A marcação está 100% em Markdown puro, compatível com o GitHub.
 
 ## ✨ Sobre o Projeto
 
-O **TaskMatch** é uma plataforma web inovadora para organização, gamificação e colaboração em tarefas em dupla.  
-Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompensas e design responsivo, o TaskMatch oferece uma experiência divertida, produtiva e segura para quem deseja evoluir junto.
+O **TaskMatch** é uma aplicação web interativa desenvolvida para casais organizarem tarefas, celebrarem conquistas e se manterem alinhados de forma divertida.  
+O app transforma o cotidiano em uma experiência envolvente e recompensadora — fortalecendo laços e melhorando a colaboração com leveza e design encantador.
 
 ---
 
 ## 🎨 Demonstração Visual
+
+Abaixo algumas capturas que demonstram como o TaskMatch se adapta a qualquer tela e oferece uma navegação agradável:
 
 <div align="center">
 
@@ -40,12 +43,12 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 <table>
   <tr>
     <td align="center">
-      <img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Tela Inicial</b></sub>
+      <img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+      <br><sub><b>🧭 Onboarding — tela de início</b></sub>
     </td>
     <td align="center">
-      <img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Painel Principal</b></sub>
+      <img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+      <br><sub><b>📋 Painel Principal — tarefas, conquistas e recados</b></sub>
     </td>
   </tr>
 </table>
@@ -55,12 +58,12 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 <table>
   <tr>
     <td align="center">
-      <img src="/public/screenshots/dashabord.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Dashboard (Mobile)</b></sub>
+      <img src="/public/screenshots/dashabord.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+      <br><sub><b>📱 Dashboard — progresso individual</b></sub>
     </td>
     <td align="center">
-      <img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Tarefas (Mobile)</b></sub>
+      <img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+      <br><sub><b>✅ Tarefas Mobile — conclusão com toque animado</b></sub>
     </td>
   </tr>
 </table>
@@ -71,148 +74,123 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 
 ## 🚀 Funcionalidades
 
-- **Onboarding Gamificado:** Criação de perfil em múltiplos passos, com animações, personalização e pareamento via código.
-- **Painel do Usuário:** Visualização de conquistas, tarefas, recompensas e progresso em tempo real.
-- **Sistema de Conquistas e Recompensas:** Ganhe badges, troque pontos por recompensas e evolua de nível.
-- **Login/Cadastro Moderno:** Autenticação simples, com link para Termos de Uso e (em breve) login social.
-- **Design Responsivo:** Visual glassmorphism, animações suaves, acessibilidade e experiência mobile-first.
-- **Privacidade e Segurança:** Em conformidade com LGPD/GDPR, Termos de Uso detalhados e consentimento explícito.
-- **Componentização e Escalabilidade:** Estrutura modular, fácil de manter e expandir.
+- 🧩 Cadastro interativo em múltiplas etapas
+- 🧠 Sugestões de tarefas com IA
+- 🏅 Sistema de conquistas automáticas
+- 🎁 Recompensas desbloqueáveis com XP
+- 💌 Envio de recados românticos
+- 👥 Pareamento via código exclusivo
+- 🔒 Termos e segurança compatíveis com LGPD/GDPR
+- 📱 Visual responsivo e adaptável a mobile
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🧱 Arquitetura do Projeto
 
-```text
-/app
-  CadastroPerfil.tsx         # Fluxo principal de cadastro/onboarding
-  painel.tsx                 # Painel do usuário autenticado
-  page.tsx                   # Página inicial
-  /termos
-    page.tsx                 # Termos de Uso
-  /privacidade
-    page.tsx                 # Política de Privacidade (em breve)
+A estrutura foi pensada com foco em modularidade, clareza e escalabilidade.
 
-components/
-  steps/                     # Steps do onboarding
-  painel-components/         # Componentes do painel
-  tarefa/                    # Tarefas e modais
-  recompensa/                # Recompensas e modais
-  comuns/                    # Toasts, toolkits, etc.
-  ui/                        # Botões, barras, UI genérica
+```
+src/
+├── app/                    # Páginas principais da aplicação
+│   ├── painel.tsx          # Painel do usuário
+│   ├── termos/page.tsx     # Termos de uso
+│   └── privacidade/        # Política de privacidade
+│
+├── components/             # Componentes reutilizáveis
+│   ├── steps/              # Telas do fluxo de onboarding
+│   ├── painel/             # Cabeçalhos, status, conquistas
+│   ├── tarefa/             # Cards, modais, botões de tarefas
+│   ├── recompensa/         # Cards e lógica de recompensas
+│   ├── comuns/             # Toasts, ícones, animações e UI
+│
+├── contexts/               # Gerenciadores de estado global
+├── hooks/                  # Lógicas reutilizáveis e custom hooks
+└── utils/                  # Funções auxiliares e validações
+```
 
-contexts/
-  PerfilContext.tsx          # Estado global do perfil
+---
 
-hooks/
-  useCadastroPerfil.ts       # Hook customizado para fluxo de cadastro
+## 💡 Itens da Lojinha
 
-🔄 Fluxo do Usuário
-flowchart TD
-    A[Escolha Inicial] -->|Criar perfil| B[Onboarding Steps]
-    A -->|Já tenho perfil| F[LoginStep]
-    B --> C[Confirmação]
-    C --> D[LoginStep]
-    D --> E[Painel]
-    F --> E
+| Nome                | Descrição                                      | Custo |
+|---------------------|-----------------------------------------------|-------|
+| 🧸 Pelúcia Virtual   | Item decorativo para perfil/avatar            | 70 XP |
+| 👑 Coroa do Amor     | Destaque no perfil por 7 dias                 | 150 XP|
+| 🌈 Efeito Mágico     | Animação extra ao concluir tarefa             | 90 XP |
+| 💠 Moldura Avatar    | Borda animada especial no avatar              | 110 XP|
+| 🎨 Tema Especial     | Altera o plano de fundo do painel             | 130 XP|
 
-🛡️ Segurança e Privacidade
-Termos de Uso: Página dedicada, detalhada e atualizada (/termos)
-Consentimento Explícito: Antes do cadastro
-LGPD/GDPR: Direito de acesso, correção, portabilidade e exclusão dos dados
-Proteção de Rotas: (em breve) Painel acessível apenas para usuários autenticados
-Política de Privacidade: (em breve) Página dedicada e linkada no login/onboarding
-Tratamento de Dados Sensíveis: Criptografia, controle de acesso e transparência
-🖥️ Tecnologias Utilizadas
-React 18.x
-Next.js 14.x
-TypeScript 5.x
-Tailwind CSS 3.x
-Framer Motion 10.x
-Context API (estado global)
-ESLint e Prettier (padronização de código)
-(Futuro) NextAuth/Firebase Auth, Notificações Push, Login Social, API pública
-⚙️ Como Executar Localmente
+---
 
-Clone o repositório:
+## ⚙️ Como Rodar Localmente
 
+```bash
+# Clone o projeto
 git clone https://github.com/elieldimz/taskmatch.git
 cd taskmatch
 
-
-Instale as dependências:
-
+# Instale as dependências
 npm install
-# ou
-yarn install
 
-
-Rode o projeto:
-
+# Rode o app
 npm run dev
-# ou
-yarn dev
 
-
-Acesse:
+# Acesse:
 http://localhost:3000
+```
 
-🛣️ Roadmap
- Onboarding interativo e gamificado
- Pareamento via código de convite
- Painel de conquistas, tarefas e recompensas
- Termos de Uso detalhados
- Política de Privacidade
- Autenticação real (NextAuth/Firebase)
- Proteção de rotas e painel
- Recuperação de senha
- Login social (Google, Apple, etc)
- Notificações push
- Sistema de níveis, loja de recompensas e ranking
- Painel administrativo
- API pública
-🤝 Como Contribuir
+---
 
-Contribuições são muito bem-vindas!
+## 🛣️ Roadmap
 
-Faça um fork do projeto
-Crie uma branch (git checkout -b feature/sua-feature)
-Commit suas alterações (git commit -m 'feat: minha contribuição')
-Push para a branch (git push origin feature/sua-feature)
-Abra um Pull Request
+- [x] Cadastro com pareamento por código
+- [x] Sugestão de tarefas via IA
+- [x] Conquistas automáticas
+- [x] Recompensas com XP
+- [ ] Autenticação real com Firebase/Auth
+- [ ] Proteção de rotas e painel privado
+- [ ] Loja de personalização
+- [ ] Notificações push
+- [ ] API pública
 
-Padrões de código:
+---
 
-Use TypeScript e siga a arquitetura de componentes
-Escreva commits claros e descritivos
-Sempre documente novas funcionalidades
-❓ Perguntas Frequentes
+## 🤝 Como Contribuir
 
-1. O TaskMatch é gratuito?
-Sim, o uso é gratuito. Futuras funcionalidades premium podem ser adicionadas.
+1. Faça um fork
+2. Crie uma branch: `git checkout -b feature/sua-feature`
+3. Commit: `git commit -m 'feat: minha feature'`
+4. Push: `git push origin feature/sua-feature`
+5. Abra um Pull Request
 
-2. Como meus dados são protegidos?
-Seus dados são tratados conforme LGPD/GDPR, com criptografia e consentimento explícito.
+---
 
-3. Posso usar o TaskMatch em equipe?
-Atualmente, o foco é em duplas. Futuras versões podem expandir para grupos.
+## 🔐 Privacidade e Segurança
 
-4. Como reportar bugs ou sugerir melhorias?
-Abra uma issue ou envie um e-mail para suporte@taskmatch.com.
+- Termos e consentimento explícito
+- Dados protegidos e criptografados
+- LGPD/GDPR aplicado desde o design
+- Autenticação e proteção de rotas (em breve)
 
-🔗 Links Úteis
-Termos de Uso
-Política de Privacidade
-Diagramas Visuais
-📄 Licença
+---
 
-Este projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+## 📄 Licença
 
-📬 Contato
-E-mail: suporte@taskmatch.com
-Issues
-LinkedIn do autor
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE).
 
-TaskMatch — Organize, conquiste e evolua em dupla!
+---
 
+## 📬 Contato
 
+- E-mail: suporte@taskmatch.com
+- Issues: [Acompanhe e reporte aqui](https://github.com/elieldimz/taskmatch/issues)
+- LinkedIn: [Seu nome ou link aqui]
+
+---
+
+**TaskMatch** — Organize, evolua e celebre conquistas ao lado de quem você ama. 💖
+```
+
+---
+
+Se quiser, posso converter esse conteúdo num arquivo `.md` direto para download. Deseja isso também?
