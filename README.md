@@ -3,7 +3,7 @@
 # TaskMatch
 
 <div align="center">
-  <img src="/public/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
+  <img src="/public/screenshots/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
 </div>
 
 <div align="center">
