@@ -1,4 +1,3 @@
-
 'use client'
 import { ranking } from '@/app/data/dashboardData'
 import { Star } from 'lucide-react'
@@ -23,9 +22,11 @@ export function DashboardRanking() {
                 flex flex-col items-center justify-end
                 bg-gradient-to-br from-purple-700/60 via-pink-600/40 to-fuchsia-700/60
                 rounded-xl p-4 sm:p-5 shadow border border-purple-300/20
-                w-full sm:w-auto
+                w-full
+                sm:w-[220px] md:w-[260px] lg:w-[320px] xl:w-[400px]
                 ${i === 0 ? 'ring-4 ring-yellow-400/80 scale-110 z-10' : 'scale-95'}
-                max-w-xs
+                max-w-full
+                transition-all duration-300
               `}
               style={{
                 minWidth: 0,

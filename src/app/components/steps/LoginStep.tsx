@@ -2,25 +2,31 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+import { useLocalStorage } from '@/app/hooks/useLocalStorage'
 
-interface LoginStepProps {
-  onLogin: (userData: { email: string; password: string }) => void
-}
-
-export default function LoginStep({ onLogin }: LoginStepProps) {
+export default function LoginStep() {
+  const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
+  const [, setAuth] = useLocalStorage('auth', false)
+  const [, setUser] = useLocalStorage('user', { email: '' })
 
   const handleLogin = async () => {
     setIsLoading(true)
     setError('')
     try {
-      // Aqui você pode chamar sua API de autenticação/cadastro
-      // Exemplo: await api.login({ email, password })
-      await new Promise(res => setTimeout(res, 800)) // simula loading
-      onLogin({ email, password })
+      // Simula autenticação (substitua por sua API)
+      await new Promise(res => setTimeout(res, 800))
+      if (email && password) {
+        setAuth(true)
+        setUser({ email })
+        router.push('/painel')
+      } else {
+        setError('Preencha e-mail e senha.')
+      }
     } catch {
       setError('Falha ao autenticar. Tente novamente.')
     } finally {

@@ -10,14 +10,26 @@ import PainelBadges from "@/app/components/painel-components/painel/PainelBadges
 import PainelRecadosBox from "@/app/components/painel-components/painel/PainelRecadosBox";
 import PainelToast from "@/app/components/painel-components/painel/PainelToast";
 import PainelEfeitoVisual from "@/app/components/painel-components/painel/PainelEfeitoVisual";
+import { LogoutButton } from "@/app/components/botoes/LogoutButton";
+import { useLocalStorage } from "@/app/hooks/useLocalStorage";
 
 // Contextos customizados
 import { useXP } from "@/app/contexts/XpContext";
 import { useTarefas } from "@/app/contexts/TarefasContext";
 import { useConquistas } from "@/app/contexts/painel/ConquistasContext";
 import { useRecados } from "@/app/contexts/painel/RecadosContext";
+import { useRouter } from "next/navigation";
 
 export default function PainelPage() {
+  const [auth] = useLocalStorage('auth', false)
+  const router = useRouter()
+
+  React.useEffect(() => {
+    if (!auth) {
+      router.push('/login')
+    }
+  }, [auth, router])
+
   const { xp, xpMax, adicionarXp } = useXP();
   const { tarefas, adicionarTarefa, concluirTarefa } = useTarefas();
   const { conquistas: conquistasDesbloqueadas } = useConquistas();
@@ -64,12 +76,12 @@ export default function PainelPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#181926] via-[#23243a] to-[#2d1b2f]">
+      <LogoutButton />
       <PainelToast showToast={showToast} />
       <PainelEfeitoVisual showEfeito={showEfeito} setShowEfeito={setShowEfeito} />
       <div className="max-w-3xl mx-auto p-4">
         <TopoPainel />
         <PainelLojaButton />
-        {/* Passe a prop correta para ConquistasTopo */}
         <ConquistasTopo conquistasDesbloqueadas={conquistasDesbloqueadas} />
         <PainelTarefas
           showModal={showModal}
