@@ -6,8 +6,8 @@ import { DashboardRanking } from '@/app/components/dashboard/DashboardRanking'
 import { DashboardStats } from '@/app/components/dashboard/DashboardStats'
 import { DashboardProgress } from 'app/components/dashboard/DashboardProgress'
 import { DashboardTasks } from 'app/components/dashboard/DashboardTasks'
-import { DashboardAchievements } from 'app/components/dashboard/DashboardAchievements'
-import { DashboardBackground } from 'app/components/dashboard/DashboardBackground'
+import { DashboardAchievements } from '@/app/components/dashboard/DashboardAchievements'
+import { DashboardBackground } from '@/app/components/visual-effects/DashboardBackground'
 
 export default function DashboardPage() {
   const frase = useMemo(() => frases[Math.floor(Math.random() * frases.length)], [])
