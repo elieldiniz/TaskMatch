@@ -17,3 +17,15 @@
 .animate-fadeInUp {
   animation: fadeInUp 0.7s cubic-bezier(.39,.575,.565,1) both;
 }
+
+/* styles/effects.css */
+.heart {
+  position: absolute;
+  animation: float 8s infinite linear;
+  opacity: 0.13;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0.8);}
+  100% { transform: translateY(-10vh) scale(1.2);}
+}
