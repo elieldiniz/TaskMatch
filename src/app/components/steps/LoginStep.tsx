@@ -5,7 +5,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useLocalStorage } from '@/app/hooks/useLocalStorage'
 
-export default function LoginStep() {
+interface LoginStepProps {
+  onLogin?: () => void
+}
+
+export default function LoginStep({ onLogin }: LoginStepProps) {
   const router = useRouter()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -23,7 +27,11 @@ export default function LoginStep() {
       if (email && password) {
         setAuth(true)
         setUser({ email })
-        router.push('/painel')
+        if (onLogin) {
+          onLogin()
+        } else {
+          router.push('/painel')
+        }
       } else {
         setError('Preencha e-mail e senha.')
       }

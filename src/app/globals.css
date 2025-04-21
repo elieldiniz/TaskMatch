@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+
+:root {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-fira-mono);
+}
+
+body {
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+.code, pre, code {
+  font-family: var(--font-mono), monospace;
+}
+
 @keyframes glow {
   0% { box-shadow: 0 0 0 0 #f472b6, 0 0 16px 2px #a21caf55; }
   50% { box-shadow: 0 0 0 10px #f472b655, 0 0 32px 8px #a21caf88; }
