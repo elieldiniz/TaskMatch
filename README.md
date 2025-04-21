@@ -1,6 +1,5 @@
 
-
-# TaskMatch
+# 💖 TaskMatch
 
 <div align="center">
   <img src="/public/screenshots/banner.png" alt="Banner TaskMatch" width="100%" style="border-radius: 12px; margin-bottom: 24px;" />
@@ -25,43 +24,23 @@
 ## ✨ Sobre o Projeto
 
 O **TaskMatch** é uma plataforma web inovadora para organização, gamificação e colaboração em tarefas em dupla.  
-Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompensas e design responsivo, o TaskMatch oferece uma experiência divertida, produtiva e segura para quem deseja evoluir junto.
+Com onboarding interativo, painel de conquistas, sistema de recompensas e design responsivo, o TaskMatch oferece uma experiência divertida, produtiva e segura para quem deseja evoluir junto.
 
 ---
 
-## 🎨 Demonstração Visual
+## 🎬 Demonstração Visual
 
 <div align="center">
 
-### 💻 Versão Desktop
+### 💻 Desktop
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Tela Inicial</b></sub>
-    </td>
-    <td align="center">
-      <img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Painel Principal</b></sub>
-    </td>
-  </tr>
-</table>
+<img src="/public/screenshots/telainicio.png" alt="Tela Inicial" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+<img src="/public/screenshots/painel.png" alt="Painel Principal" width="400" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
 
-### 📱 Versão Mobile
+### 📱 Mobile
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="/public/screenshots/dashboard.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Dashboard (Mobile)</b></sub>
-    </td>
-    <td align="center">
-      <img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" /><br>
-      <sub><b>Tarefas (Mobile)</b></sub>
-    </td>
-  </tr>
-</table>
+<img src="/public/screenshots/dashboard.png" alt="Dashboard Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
+<img src="/public/screenshots/tarefas.png" alt="Tarefas Mobile" width="180" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);" />
 
 </div>
 
@@ -69,17 +48,17 @@ Com um fluxo de onboarding interativo, painel de conquistas, sistema de recompen
 
 ## 🚀 Funcionalidades
 
-- **Onboarding Gamificado:** Criação de perfil em múltiplos passos, com animações, personalização e pareamento via código.
-- **Painel do Usuário:** Visualização de conquistas, tarefas, recompensas e progresso em tempo real.
-- **Sistema de Conquistas e Recompensas:** Ganhe badges, troque pontos por recompensas e evolua de nível.
-- **Login/Cadastro Moderno:** Autenticação simples, com link para Termos de Uso e (em breve) login social.
-- **Design Responsivo:** Visual glassmorphism, animações suaves, acessibilidade e experiência mobile-first.
-- **Privacidade e Segurança:** Em conformidade com LGPD/GDPR, Termos de Uso detalhados e consentimento explícito.
-- **Componentização e Escalabilidade:** Estrutura modular, fácil de manter e expandir.
+- 🎮 **Onboarding Gamificado:** Criação de perfil em múltiplos passos, com animações, personalização e pareamento via código.
+- 🏆 **Painel do Usuário:** Visualização de conquistas, tarefas, recompensas e progresso em tempo real.
+- 🎖️ **Sistema de Conquistas e Recompensas:** Ganhe badges, troque pontos por recompensas e evolua de nível.
+- 🔐 **Login/Cadastro Moderno:** Autenticação simples, com link para Termos de Uso e (em breve) login social.
+- 📱 **Design Responsivo:** Visual glassmorphism, animações suaves, acessibilidade e experiência mobile-first.
+- 🛡️ **Privacidade e Segurança:** Em conformidade com LGPD/GDPR, Termos de Uso detalhados e consentimento explícito.
+- 🧩 **Componentização e Escalabilidade:** Estrutura modular, fácil de manter e expandir.
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## 🗂️ Estrutura do Projeto
 
 ```text
 /app
@@ -131,29 +110,22 @@ Context API (estado global)
 ESLint e Prettier (padronização de código)
 (Futuro) NextAuth/Firebase Auth, Notificações Push, Login Social, API pública
 ⚙️ Como Executar Localmente
-
-Clone o repositório:
-
+# Clone o repositório
 git clone https://github.com/elieldimz/taskmatch.git
 cd taskmatch
 
-
-Instale as dependências:
-
+# Instale as dependências
 npm install
 # ou
 yarn install
 
-
-Rode o projeto:
-
+# Rode o projeto
 npm run dev
 # ou
 yarn dev
 
 
-Acesse:
-http://localhost:3000
+Acesse: http://localhost:3000
 
 🛣️ Roadmap
  Onboarding interativo e gamificado
@@ -185,19 +157,6 @@ Use TypeScript e siga a arquitetura de componentes
 Escreva commits claros e descritivos
 Sempre documente novas funcionalidades
 ❓ Perguntas Frequentes
-
-1. O TaskMatch é gratuito?
-Sim, o uso é gratuito. Futuras funcionalidades premium podem ser adicionadas.
-
-2. Como meus dados são protegidos?
-Seus dados são tratados conforme LGPD/GDPR, com criptografia e consentimento explícito.
-
-3. Posso usar o TaskMatch em equipe?
-Atualmente, o foco é em duplas. Futuras versões podem expandir para grupos.
-
-4. Como reportar bugs ou sugerir melhorias?
-Abra uma issue ou envie um e-mail para suporte@taskmatch.com.
-
 🔗 Links Úteis
 Termos de Uso
 Política de Privacidade
@@ -212,5 +171,6 @@ Issues
 LinkedIn do autor
 
 TaskMatch — Organize, conquiste e evolua em dupla!
+
 
 
