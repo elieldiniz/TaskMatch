@@ -198,6 +198,9 @@ Atualmente, o foco é em duplas. Futuras versões podem expandir para grupos.
 4. Como reportar bugs ou sugerir melhorias?
 Abra uma issue ou envie um e-mail para suporte@taskmatch.com.
 
+Backend oficial:
+TaskMack Backend
+
 🔗 Links Úteis
 Termos de Uso
 Política de Privacidade
